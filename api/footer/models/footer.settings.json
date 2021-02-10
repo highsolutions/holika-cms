@@ -1,0 +1,40 @@
+{
+  "kind": "singleType",
+  "collectionName": "footer",
+  "info": {
+    "name": "Stopka",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": false
+    },
+    "address": {
+      "type": "string"
+    },
+    "nip": {
+      "type": "string"
+    },
+    "regon": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "phone_second": {
+      "type": "string"
+    },
+    "additional_info": {
+      "type": "string"
+    },
+    "email": {
+      "type": "string"
+    }
+  }
+}
