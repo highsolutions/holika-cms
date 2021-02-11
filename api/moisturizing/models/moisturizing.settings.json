@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "moisturizing",
+  "info": {
+    "name": "Moisturizing"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "image": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
