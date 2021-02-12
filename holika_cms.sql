@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 10 Lut 2021, 12:54
+-- Czas generowania: 12 Lut 2021, 13:55
 -- Wersja serwera: 10.5.8-MariaDB
 -- Wersja PHP: 7.2.34
 
@@ -62,7 +62,18 @@ INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VA
 (19, 'plugin_users-permissions_email', '{\"reset_password\":{\"display\":\"Email.template.reset_password\",\"icon\":\"sync\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Reset password\",\"message\":\"<p>We heard that you lost your password. Sorry about that!</p>\\n\\n<p>But don’t worry! You can use the following link to reset your password:</p>\\n<p><%= URL %>?code=<%= TOKEN %></p>\\n\\n<p>Thanks.</p>\"}},\"email_confirmation\":{\"display\":\"Email.template.email_confirmation\",\"icon\":\"check-square\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Account confirmation\",\"message\":\"<p>Thank you for registering!</p>\\n\\n<p>You have to confirm your email address. Please click on the link below.</p>\\n\\n<p><%= URL %>?confirmation=<%= CODE %></p>\\n\\n<p>Thanks.</p>\"}}}', 'object', '', ''),
 (20, 'plugin_users-permissions_advanced', '{\"unique_email\":true,\"allow_register\":true,\"email_confirmation\":false,\"email_reset_password\":null,\"email_confirmation_redirection\":null,\"default_role\":\"authenticated\"}', 'object', '', ''),
 (21, 'model_def_application::footer.footer', '{\"uid\":\"application::footer.footer\",\"collectionName\":\"footer\",\"kind\":\"singleType\",\"info\":{\"name\":\"Stopka\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"name\":{\"type\":\"string\",\"required\":false},\"address\":{\"type\":\"string\"},\"nip\":{\"type\":\"string\"},\"regon\":{\"type\":\"string\"},\"phone\":{\"type\":\"string\"},\"phone_second\":{\"type\":\"string\"},\"additional_info\":{\"type\":\"string\"},\"email\":{\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
-(22, 'plugin_content_manager_configuration_content_types::application::footer.footer', '{\"uid\":\"application::footer.footer\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"address\":{\"edit\":{\"label\":\"Address\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Address\",\"searchable\":true,\"sortable\":true}},\"nip\":{\"edit\":{\"label\":\"Nip\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nip\",\"searchable\":true,\"sortable\":true}},\"regon\":{\"edit\":{\"label\":\"Regon\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Regon\",\"searchable\":true,\"sortable\":true}},\"phone\":{\"edit\":{\"label\":\"Phone\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone\",\"searchable\":true,\"sortable\":true}},\"phone_second\":{\"edit\":{\"label\":\"Phone_second\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone_second\",\"searchable\":true,\"sortable\":true}},\"additional_info\":{\"edit\":{\"label\":\"Additional_info\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Additional_info\",\"searchable\":true,\"sortable\":true}},\"email\":{\"edit\":{\"label\":\"Email\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Email\",\"searchable\":true,\"sortable\":true}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"address\",\"nip\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"address\",\"size\":6}],[{\"name\":\"nip\",\"size\":6},{\"name\":\"regon\",\"size\":6}],[{\"name\":\"phone\",\"size\":6},{\"name\":\"phone_second\",\"size\":6}],[{\"name\":\"additional_info\",\"size\":6},{\"name\":\"email\",\"size\":6}]]}}', 'object', '', '');
+(22, 'plugin_content_manager_configuration_content_types::application::footer.footer', '{\"uid\":\"application::footer.footer\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"address\":{\"edit\":{\"label\":\"Address\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Address\",\"searchable\":true,\"sortable\":true}},\"nip\":{\"edit\":{\"label\":\"Nip\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nip\",\"searchable\":true,\"sortable\":true}},\"regon\":{\"edit\":{\"label\":\"Regon\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Regon\",\"searchable\":true,\"sortable\":true}},\"phone\":{\"edit\":{\"label\":\"Phone\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone\",\"searchable\":true,\"sortable\":true}},\"phone_second\":{\"edit\":{\"label\":\"Phone_second\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone_second\",\"searchable\":true,\"sortable\":true}},\"additional_info\":{\"edit\":{\"label\":\"Additional_info\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Additional_info\",\"searchable\":true,\"sortable\":true}},\"email\":{\"edit\":{\"label\":\"Email\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Email\",\"searchable\":true,\"sortable\":true}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"address\",\"nip\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"address\",\"size\":6}],[{\"name\":\"nip\",\"size\":6},{\"name\":\"regon\",\"size\":6}],[{\"name\":\"phone\",\"size\":6},{\"name\":\"phone_second\",\"size\":6}],[{\"name\":\"additional_info\",\"size\":6},{\"name\":\"email\",\"size\":6}]]}}', 'object', '', ''),
+(23, 'model_def_application::nawilzamy.nawilzamy', '{\"uid\":\"application::nawilzamy.nawilzamy\",\"collectionName\":\"moisturizing\",\"kind\":\"singleType\",\"info\":{\"name\":\"Moisturizing\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"image\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(25, 'model_def_application::moisturizing.moisturizing', '{\"uid\":\"application::moisturizing.moisturizing\",\"collectionName\":\"moisturizing\",\"kind\":\"singleType\",\"info\":{\"name\":\"Moisturizing\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"image\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(27, 'model_def_plugins::import-content.importconfig', '{\"uid\":\"plugins::import-content.importconfig\",\"collectionName\":\"import-content_importconfig\",\"kind\":\"collectionType\",\"info\":{\"name\":\"importconfig\",\"description\":\"\"},\"options\":{\"timestamps\":[\"created_at\",\"updated_at\"],\"increments\":true,\"comment\":\"\"},\"attributes\":{\"date\":{\"type\":\"date\"},\"source\":{\"type\":\"string\"},\"options\":{\"type\":\"json\"},\"contentType\":{\"type\":\"string\"},\"fieldMapping\":{\"type\":\"json\"},\"ongoing\":{\"type\":\"boolean\"},\"importeditems\":{\"collection\":\"importeditem\",\"via\":\"importconfig\",\"plugin\":\"import-content\",\"isVirtual\":true},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(28, 'model_def_plugins::import-content.importeditem', '{\"uid\":\"plugins::import-content.importeditem\",\"collectionName\":\"import-content_importeditem\",\"kind\":\"collectionType\",\"info\":{\"name\":\"importeditem\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"comment\":\"\"},\"attributes\":{\"ContentType\":{\"type\":\"string\"},\"ContentId\":{\"type\":\"integer\"},\"importconfig\":{\"model\":\"importconfig\",\"via\":\"importeditems\",\"plugin\":\"import-content\"},\"importedFiles\":{\"type\":\"json\"},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(31, 'model_def_application::shop-adresses.shop-adresses', '{\"uid\":\"application::shop-adresses.shop-adresses\",\"collectionName\":\"shop_adresses\",\"kind\":\"collectionType\",\"info\":{\"name\":\"Shop Adresses\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"name\":{\"type\":\"string\",\"required\":true},\"email\":{\"type\":\"email\",\"required\":false},\"phone\":{\"type\":\"string\"},\"content\":{\"type\":\"text\"},\"street\":{\"type\":\"string\"},\"city\":{\"type\":\"string\"},\"postal_code\":{\"type\":\"string\"},\"website\":{\"type\":\"string\"},\"latitude\":{\"type\":\"float\"},\"longitude\":{\"type\":\"float\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(32, 'plugin_content_manager_configuration_content_types::application::shop-adresses.shop-adresses', '{\"uid\":\"application::shop-adresses.shop-adresses\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"email\":{\"edit\":{\"label\":\"Email\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Email\",\"searchable\":true,\"sortable\":true}},\"phone\":{\"edit\":{\"label\":\"Phone\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone\",\"searchable\":true,\"sortable\":true}},\"content\":{\"edit\":{\"label\":\"Content\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Content\",\"searchable\":true,\"sortable\":true}},\"street\":{\"edit\":{\"label\":\"Street\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Street\",\"searchable\":true,\"sortable\":true}},\"city\":{\"edit\":{\"label\":\"City\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"City\",\"searchable\":true,\"sortable\":true}},\"postal_code\":{\"edit\":{\"label\":\"Postal_code\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Postal_code\",\"searchable\":true,\"sortable\":true}},\"website\":{\"edit\":{\"label\":\"Website\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Website\",\"searchable\":true,\"sortable\":true}},\"latitude\":{\"edit\":{\"label\":\"Latitude\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Latitude\",\"searchable\":true,\"sortable\":true}},\"longitude\":{\"edit\":{\"label\":\"Longitude\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Longitude\",\"searchable\":true,\"sortable\":true}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"email\",\"phone\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"email\",\"size\":6}],[{\"name\":\"phone\",\"size\":6},{\"name\":\"content\",\"size\":6}],[{\"name\":\"street\",\"size\":6},{\"name\":\"city\",\"size\":6}],[{\"name\":\"postal_code\",\"size\":6},{\"name\":\"website\",\"size\":6}],[{\"name\":\"latitude\",\"size\":4},{\"name\":\"longitude\",\"size\":4}]]}}', 'object', '', ''),
+(34, 'model_def_plugins::import-addresses.importconfig', '{\"uid\":\"plugins::import-addresses.importconfig\",\"collectionName\":\"import-addresses_importconfig\",\"kind\":\"collectionType\",\"info\":{\"name\":\"importconfig\",\"description\":\"\"},\"options\":{\"timestamps\":[\"created_at\",\"updated_at\"],\"increments\":true,\"comment\":\"\"},\"attributes\":{\"date\":{\"type\":\"date\"},\"source\":{\"type\":\"string\"},\"options\":{\"type\":\"json\"},\"contentType\":{\"type\":\"string\"},\"fieldMapping\":{\"type\":\"json\"},\"ongoing\":{\"type\":\"boolean\"},\"importeditems\":{\"collection\":\"importeditem\",\"via\":\"importconfig\",\"plugin\":\"import-content\",\"isVirtual\":true},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(36, 'model_def_plugins::import-addresses.importeditem', '{\"uid\":\"plugins::import-addresses.importeditem\",\"collectionName\":\"import-addresses_importeditem\",\"kind\":\"collectionType\",\"info\":{\"name\":\"importeditem\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"comment\":\"\"},\"attributes\":{\"ContentType\":{\"type\":\"string\"},\"ContentId\":{\"type\":\"integer\"},\"importconfig\":{\"model\":\"importconfig\",\"via\":\"importeditems\",\"plugin\":\"import-content\"},\"importedFiles\":{\"type\":\"json\"},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(40, 'plugin_import-content_initHasRun', 'true', 'boolean', 'development', ''),
+(47, 'plugin_content_manager_configuration_content_types::plugins::import-content.importconfig', '{\"uid\":\"plugins::import-content.importconfig\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"source\",\"defaultSortBy\":\"source\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"date\":{\"edit\":{\"label\":\"Date\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Date\",\"searchable\":true,\"sortable\":true}},\"source\":{\"edit\":{\"label\":\"Source\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Source\",\"searchable\":true,\"sortable\":true}},\"options\":{\"edit\":{\"label\":\"Options\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Options\",\"searchable\":false,\"sortable\":false}},\"contentType\":{\"edit\":{\"label\":\"ContentType\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentType\",\"searchable\":true,\"sortable\":true}},\"fieldMapping\":{\"edit\":{\"label\":\"FieldMapping\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"FieldMapping\",\"searchable\":false,\"sortable\":false}},\"ongoing\":{\"edit\":{\"label\":\"Ongoing\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Ongoing\",\"searchable\":true,\"sortable\":true}},\"importeditems\":{\"edit\":{\"label\":\"Importeditems\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"ContentType\"},\"list\":{\"label\":\"Importeditems\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"date\",\"source\",\"contentType\"],\"editRelations\":[\"importeditems\"],\"edit\":[[{\"name\":\"date\",\"size\":4},{\"name\":\"source\",\"size\":6}],[{\"name\":\"options\",\"size\":12}],[{\"name\":\"contentType\",\"size\":6}],[{\"name\":\"fieldMapping\",\"size\":12}],[{\"name\":\"ongoing\",\"size\":4}]]}}', 'object', '', ''),
+(48, 'plugin_content_manager_configuration_content_types::plugins::import-content.importeditem', '{\"uid\":\"plugins::import-content.importeditem\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"ContentType\",\"defaultSortBy\":\"ContentType\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"ContentType\":{\"edit\":{\"label\":\"ContentType\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentType\",\"searchable\":true,\"sortable\":true}},\"ContentId\":{\"edit\":{\"label\":\"ContentId\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentId\",\"searchable\":true,\"sortable\":true}},\"importconfig\":{\"edit\":{\"label\":\"Importconfig\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"source\"},\"list\":{\"label\":\"Importconfig\",\"searchable\":true,\"sortable\":true}},\"importedFiles\":{\"edit\":{\"label\":\"ImportedFiles\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ImportedFiles\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"ContentType\",\"ContentId\",\"importconfig\"],\"editRelations\":[\"importconfig\"],\"edit\":[[{\"name\":\"ContentType\",\"size\":6},{\"name\":\"ContentId\",\"size\":4}],[{\"name\":\"importedFiles\",\"size\":12}]]}}', 'object', '', '');
 
 -- --------------------------------------------------------
 
@@ -93,6 +104,164 @@ CREATE TABLE `footer` (
 
 INSERT INTO `footer` (`id`, `name`, `address`, `nip`, `regon`, `phone`, `phone_second`, `additional_info`, `email`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
 (1, 'My Asia A&K Beauty Krzysztof Chwesiuk', '43-309 Bielsko-Biała, ul. Bystrzańska 70', '547-20-68-255', '242859723', '+48 33 445 42 45', '+44 203 769 7900', 'Oferty hurtowe, napisz: hurt@holika.pl', 'hurt@holika.pl', '2021-02-10 12:46:30', 1, 1, '2021-02-10 11:46:26', '2021-02-10 11:46:30');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `import-addresses_importconfig`
+--
+
+CREATE TABLE `import-addresses_importconfig` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `date` date DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `options` longtext DEFAULT NULL,
+  `contentType` varchar(255) DEFAULT NULL,
+  `fieldMapping` longtext DEFAULT NULL,
+  `ongoing` tinyint(1) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `import-addresses_importeditem`
+--
+
+CREATE TABLE `import-addresses_importeditem` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `ContentType` varchar(255) DEFAULT NULL,
+  `ContentId` int(11) DEFAULT NULL,
+  `importconfig` int(11) DEFAULT NULL,
+  `importedFiles` longtext DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `import-content_importconfig`
+--
+
+CREATE TABLE `import-content_importconfig` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `date` date DEFAULT NULL,
+  `source` varchar(255) DEFAULT NULL,
+  `options` longtext DEFAULT NULL,
+  `contentType` varchar(255) DEFAULT NULL,
+  `fieldMapping` longtext DEFAULT NULL,
+  `ongoing` tinyint(1) DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `import-content_importconfig`
+--
+
+INSERT INTO `import-content_importconfig` (`id`, `date`, `source`, `options`, `contentType`, `fieldMapping`, `ongoing`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(3, NULL, 'upload', '{\"filename\":\"localizations.csv\"}', 'application::shop-adresses.shop-adresses', '{\"name\":{\"targetField\":\"name\"},\"email\":{\"targetField\":\"email\"},\"phone\":{\"targetField\":\"phone\"},\"content\":{\"targetField\":\"content\"},\"street\":{\"targetField\":\"street\"},\"city\":{\"targetField\":\"city\"},\"postal_code\":{\"targetField\":\"postal_code\"},\"website\":{\"targetField\":\"website\"},\"latitude\":{\"targetField\":\"latitude\"},\"longitude\":{\"targetField\":\"longitude\"}}', 0, NULL, NULL, '2021-02-12 12:03:30', '2021-02-12 12:05:36');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `import-content_importeditem`
+--
+
+CREATE TABLE `import-content_importeditem` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `ContentType` varchar(255) DEFAULT NULL,
+  `ContentId` int(11) DEFAULT NULL,
+  `importconfig` int(11) DEFAULT NULL,
+  `importedFiles` longtext DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `importconfigs`
+--
+
+CREATE TABLE `importconfigs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `importeditems`
+--
+
+CREATE TABLE `importeditems` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `moisturizing`
+--
+
+CREATE TABLE `moisturizing` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `moisturizing`
+--
+
+INSERT INTO `moisturizing` (`id`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, '2021-02-11 10:36:41', 1, 1, '2021-02-11 09:36:06', '2021-02-11 09:36:41');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `shop_adresses`
+--
+
+CREATE TABLE `shop_adresses` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `email` varchar(255) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `content` longtext DEFAULT NULL,
+  `street` varchar(255) DEFAULT NULL,
+  `city` varchar(255) DEFAULT NULL,
+  `postal_code` varchar(255) DEFAULT NULL,
+  `website` varchar(255) DEFAULT NULL,
+  `latitude` double DEFAULT NULL,
+  `longitude` double DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -196,7 +365,20 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `fields`, `condition
 (51, 'plugins::content-manager.explorer.read', 'application::footer.footer', '[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"]', '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
 (52, 'plugins::content-manager.explorer.update', 'application::footer.footer', '[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"]', '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
 (53, 'plugins::content-manager.explorer.delete', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
-(54, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41');
+(54, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
+(73, 'plugins::content-manager.explorer.create', 'application::shop-adresses.shop-adresses', '[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"]', '[]', 1, '2021-02-11 12:48:58', '2021-02-11 12:48:58'),
+(74, 'plugins::content-manager.explorer.read', 'application::shop-adresses.shop-adresses', '[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"]', '[]', 1, '2021-02-11 12:48:58', '2021-02-11 12:48:58'),
+(75, 'plugins::content-manager.explorer.update', 'application::shop-adresses.shop-adresses', '[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"]', '[]', 1, '2021-02-11 12:48:58', '2021-02-11 12:48:58'),
+(76, 'plugins::content-manager.explorer.delete', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-02-11 12:48:58', '2021-02-11 12:48:58'),
+(77, 'plugins::content-manager.explorer.publish', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-02-11 12:48:58', '2021-02-11 12:48:58'),
+(112, 'plugins::content-manager.explorer.create', 'plugins::import-content.importconfig', '[\"date\",\"source\",\"options\",\"contentType\",\"fieldMapping\",\"ongoing\",\"importeditems\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(113, 'plugins::content-manager.explorer.create', 'plugins::import-content.importeditem', '[\"ContentType\",\"ContentId\",\"importconfig\",\"importedFiles\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(114, 'plugins::content-manager.explorer.read', 'plugins::import-content.importconfig', '[\"date\",\"source\",\"options\",\"contentType\",\"fieldMapping\",\"ongoing\",\"importeditems\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(115, 'plugins::content-manager.explorer.read', 'plugins::import-content.importeditem', '[\"ContentType\",\"ContentId\",\"importconfig\",\"importedFiles\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(116, 'plugins::content-manager.explorer.update', 'plugins::import-content.importconfig', '[\"date\",\"source\",\"options\",\"contentType\",\"fieldMapping\",\"ongoing\",\"importeditems\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(117, 'plugins::content-manager.explorer.update', 'plugins::import-content.importeditem', '[\"ContentType\",\"ContentId\",\"importconfig\",\"importedFiles\"]', '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(118, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importconfig', NULL, '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58'),
+(119, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importeditem', NULL, '[]', 1, '2021-02-12 11:19:58', '2021-02-12 11:19:58');
 
 -- --------------------------------------------------------
 
@@ -285,6 +467,13 @@ CREATE TABLE `upload_file` (
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `upload_file`
+--
+
+INSERT INTO `upload_file` (`id`, `name`, `alternativeText`, `caption`, `width`, `height`, `formats`, `hash`, `ext`, `mime`, `size`, `url`, `previewUrl`, `provider`, `provider_metadata`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(2, 'moisturize.webp', '', '', 1653, 1882, '{\"thumbnail\":{\"name\":\"thumbnail_moisturize.webp\",\"hash\":\"thumbnail_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":137,\"height\":156,\"size\":4.77,\"path\":null,\"url\":\"/uploads/thumbnail_moisturize_ae30174f65.webp\"},\"large\":{\"name\":\"large_moisturize.webp\",\"hash\":\"large_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":878,\"height\":1000,\"size\":50.26,\"path\":null,\"url\":\"/uploads/large_moisturize_ae30174f65.webp\"},\"medium\":{\"name\":\"medium_moisturize.webp\",\"hash\":\"medium_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":659,\"height\":750,\"size\":34.94,\"path\":null,\"url\":\"/uploads/medium_moisturize_ae30174f65.webp\"},\"small\":{\"name\":\"small_moisturize.webp\",\"hash\":\"small_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":439,\"height\":500,\"size\":20.99,\"path\":null,\"url\":\"/uploads/small_moisturize_ae30174f65.webp\"}}', 'moisturize_ae30174f65', '.webp', 'image/webp', '104.66', '/uploads/moisturize_ae30174f65.webp', NULL, 'local', NULL, 1, 1, '2021-02-11 09:36:02', '2021-02-11 09:36:02');
+
 -- --------------------------------------------------------
 
 --
@@ -299,6 +488,13 @@ CREATE TABLE `upload_file_morph` (
   `field` longtext DEFAULT NULL,
   `order` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `upload_file_morph`
+--
+
+INSERT INTO `upload_file_morph` (`id`, `upload_file_id`, `related_id`, `related_type`, `field`, `order`) VALUES
+(2, 2, 1, 'moisturizing', 'image', 1);
 
 -- --------------------------------------------------------
 
@@ -477,12 +673,54 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (152, 'users-permissions', 'userspermissions', 'updateproviders', 0, '', 2, NULL, NULL),
 (153, 'users-permissions', 'userspermissions', 'updaterole', 0, '', 1, NULL, NULL),
 (154, 'users-permissions', 'userspermissions', 'updaterole', 0, '', 2, NULL, NULL),
-(155, 'application', 'footer', 'delete', 0, '', 1, NULL, NULL),
+(155, 'application', 'footer', 'delete', 1, '', 1, NULL, NULL),
 (156, 'application', 'footer', 'delete', 0, '', 2, NULL, NULL),
-(157, 'application', 'footer', 'find', 0, '', 1, NULL, NULL),
+(157, 'application', 'footer', 'find', 1, '', 1, NULL, NULL),
 (158, 'application', 'footer', 'find', 1, '', 2, NULL, NULL),
-(159, 'application', 'footer', 'update', 0, '', 1, NULL, NULL),
-(160, 'application', 'footer', 'update', 0, '', 2, NULL, NULL);
+(159, 'application', 'footer', 'update', 1, '', 1, NULL, NULL),
+(160, 'application', 'footer', 'update', 0, '', 2, NULL, NULL),
+(203, 'application', 'shop-adresses', 'count', 1, '', 1, NULL, NULL),
+(204, 'application', 'shop-adresses', 'count', 1, '', 2, NULL, NULL),
+(205, 'application', 'shop-adresses', 'create', 1, '', 1, NULL, NULL),
+(206, 'application', 'shop-adresses', 'create', 0, '', 2, NULL, NULL),
+(207, 'application', 'shop-adresses', 'delete', 1, '', 1, NULL, NULL),
+(208, 'application', 'shop-adresses', 'delete', 0, '', 2, NULL, NULL),
+(209, 'application', 'shop-adresses', 'find', 1, '', 1, NULL, NULL),
+(210, 'application', 'shop-adresses', 'find', 1, '', 2, NULL, NULL),
+(211, 'application', 'shop-adresses', 'findone', 1, '', 1, NULL, NULL),
+(212, 'application', 'shop-adresses', 'findone', 1, '', 2, NULL, NULL),
+(213, 'application', 'shop-adresses', 'update', 1, '', 1, NULL, NULL),
+(214, 'application', 'shop-adresses', 'update', 0, '', 2, NULL, NULL),
+(291, 'import-content', 'import-content', 'preanalyzeimportfile', 0, '', 1, NULL, NULL),
+(292, 'import-content', 'import-content', 'preanalyzeimportfile', 0, '', 2, NULL, NULL),
+(293, 'import-content', 'import-content', 'create', 0, '', 1, NULL, NULL),
+(294, 'import-content', 'import-content', 'create', 0, '', 2, NULL, NULL),
+(295, 'import-content', 'import-content', 'delete', 0, '', 1, NULL, NULL),
+(296, 'import-content', 'import-content', 'delete', 0, '', 2, NULL, NULL),
+(297, 'import-content', 'import-content', 'index', 0, '', 1, NULL, NULL),
+(298, 'import-content', 'import-content', 'index', 0, '', 2, NULL, NULL),
+(299, 'import-content', 'import-content', 'undo', 0, '', 1, NULL, NULL),
+(300, 'import-content', 'import-content', 'undo', 0, '', 2, NULL, NULL),
+(301, 'import-content', 'import-config', 'count', 0, '', 1, NULL, NULL),
+(302, 'import-content', 'import-config', 'count', 0, '', 2, NULL, NULL),
+(303, 'import-content', 'import-config', 'delete', 0, '', 1, NULL, NULL),
+(304, 'import-content', 'import-config', 'find', 0, '', 1, NULL, NULL),
+(305, 'import-content', 'import-config', 'delete', 0, '', 2, NULL, NULL),
+(306, 'import-content', 'import-config', 'find', 0, '', 2, NULL, NULL),
+(307, 'import-content', 'import-config', 'findone', 0, '', 1, NULL, NULL),
+(308, 'import-content', 'import-config', 'findone', 0, '', 2, NULL, NULL),
+(309, 'import-content', 'import-config', 'update', 0, '', 1, NULL, NULL),
+(310, 'import-content', 'import-config', 'update', 0, '', 2, NULL, NULL),
+(311, 'import-content', 'imported-item', 'count', 0, '', 1, NULL, NULL),
+(312, 'import-content', 'imported-item', 'count', 0, '', 2, NULL, NULL),
+(313, 'import-content', 'imported-item', 'delete', 0, '', 1, NULL, NULL),
+(314, 'import-content', 'imported-item', 'delete', 0, '', 2, NULL, NULL),
+(315, 'import-content', 'imported-item', 'find', 0, '', 1, NULL, NULL),
+(316, 'import-content', 'imported-item', 'find', 0, '', 2, NULL, NULL),
+(317, 'import-content', 'imported-item', 'findone', 0, '', 1, NULL, NULL),
+(318, 'import-content', 'imported-item', 'update', 0, '', 1, NULL, NULL),
+(319, 'import-content', 'imported-item', 'findone', 0, '', 2, NULL, NULL),
+(320, 'import-content', 'imported-item', 'update', 0, '', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -544,6 +782,54 @@ ALTER TABLE `core_store`
 -- Indeksy dla tabeli `footer`
 --
 ALTER TABLE `footer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `import-addresses_importconfig`
+--
+ALTER TABLE `import-addresses_importconfig`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `import-addresses_importeditem`
+--
+ALTER TABLE `import-addresses_importeditem`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `import-content_importconfig`
+--
+ALTER TABLE `import-content_importconfig`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `import-content_importeditem`
+--
+ALTER TABLE `import-content_importeditem`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `importconfigs`
+--
+ALTER TABLE `importconfigs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `importeditems`
+--
+ALTER TABLE `importeditems`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `moisturizing`
+--
+ALTER TABLE `moisturizing`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `shop_adresses`
+--
+ALTER TABLE `shop_adresses`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -619,13 +905,61 @@ ALTER TABLE `users-permissions_user`
 -- AUTO_INCREMENT dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT dla tabeli `footer`
 --
 ALTER TABLE `footer`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `import-addresses_importconfig`
+--
+ALTER TABLE `import-addresses_importconfig`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `import-addresses_importeditem`
+--
+ALTER TABLE `import-addresses_importeditem`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `import-content_importconfig`
+--
+ALTER TABLE `import-content_importconfig`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT dla tabeli `import-content_importeditem`
+--
+ALTER TABLE `import-content_importeditem`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=582;
+
+--
+-- AUTO_INCREMENT dla tabeli `importconfigs`
+--
+ALTER TABLE `importconfigs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `importeditems`
+--
+ALTER TABLE `importeditems`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `moisturizing`
+--
+ALTER TABLE `moisturizing`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `shop_adresses`
+--
+ALTER TABLE `shop_adresses`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=582;
 
 --
 -- AUTO_INCREMENT dla tabeli `strapi_administrator`
@@ -637,7 +971,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT dla tabeli `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=120;
 
 --
 -- AUTO_INCREMENT dla tabeli `strapi_role`
@@ -661,19 +995,19 @@ ALTER TABLE `strapi_webhooks`
 -- AUTO_INCREMENT dla tabeli `upload_file`
 --
 ALTER TABLE `upload_file`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `upload_file_morph`
 --
 ALTER TABLE `upload_file_morph`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_permission`
 --
 ALTER TABLE `users-permissions_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=321;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_role`

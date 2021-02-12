@@ -1,0 +1,124 @@
+{
+  "routes": [
+    {
+      "method": "POST",
+      "path": "/preAnalyzeImportFile",
+      "handler": "import-content.preAnalyzeImportFile",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/",
+      "handler": "import-content.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/",
+      "handler": "import-content.index",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/:importId",
+      "handler": "import-content.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/:importId/undo",
+      "handler": "import-content.undo",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importconfig",
+      "handler": "import-config.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importconfig/:importId",
+      "handler": "import-config.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importconfig/count",
+      "handler": "import-config.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/importconfig/:importId",
+      "handler": "import-config.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/importconfig/:importId",
+      "handler": "import-config.delete",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importeditem",
+      "handler": "imported-item.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importeditem/:importId",
+      "handler": "imported-item.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/importeditem/count",
+      "handler": "imported-item.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/importeditem/:importId",
+      "handler": "imported-item.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/importeditem/:importId",
+      "handler": "imported-item.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
