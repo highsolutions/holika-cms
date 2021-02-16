@@ -5,7 +5,7 @@
 ## Installations
 
 ### Test
-* WEB: https://holika.hslive.eu
+* WEB: https://cms-holika.hslive.eu
 
 ## 🧐 Technologies
 
