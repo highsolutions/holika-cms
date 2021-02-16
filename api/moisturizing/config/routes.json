@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/moisturizing",
+      "handler": "moisturizing.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/moisturizing",
+      "handler": "moisturizing.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/moisturizing",
+      "handler": "moisturizing.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

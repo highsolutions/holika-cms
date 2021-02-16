@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 10 Lut 2021, 12:54
+-- Czas generowania: 11 Lut 2021, 10:40
 -- Wersja serwera: 10.5.8-MariaDB
 -- Wersja PHP: 7.2.34
 
@@ -62,7 +62,10 @@ INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VA
 (19, 'plugin_users-permissions_email', '{\"reset_password\":{\"display\":\"Email.template.reset_password\",\"icon\":\"sync\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Reset password\",\"message\":\"<p>We heard that you lost your password. Sorry about that!</p>\\n\\n<p>But don’t worry! You can use the following link to reset your password:</p>\\n<p><%= URL %>?code=<%= TOKEN %></p>\\n\\n<p>Thanks.</p>\"}},\"email_confirmation\":{\"display\":\"Email.template.email_confirmation\",\"icon\":\"check-square\",\"options\":{\"from\":{\"name\":\"Administration Panel\",\"email\":\"no-reply@strapi.io\"},\"response_email\":\"\",\"object\":\"Account confirmation\",\"message\":\"<p>Thank you for registering!</p>\\n\\n<p>You have to confirm your email address. Please click on the link below.</p>\\n\\n<p><%= URL %>?confirmation=<%= CODE %></p>\\n\\n<p>Thanks.</p>\"}}}', 'object', '', ''),
 (20, 'plugin_users-permissions_advanced', '{\"unique_email\":true,\"allow_register\":true,\"email_confirmation\":false,\"email_reset_password\":null,\"email_confirmation_redirection\":null,\"default_role\":\"authenticated\"}', 'object', '', ''),
 (21, 'model_def_application::footer.footer', '{\"uid\":\"application::footer.footer\",\"collectionName\":\"footer\",\"kind\":\"singleType\",\"info\":{\"name\":\"Stopka\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"name\":{\"type\":\"string\",\"required\":false},\"address\":{\"type\":\"string\"},\"nip\":{\"type\":\"string\"},\"regon\":{\"type\":\"string\"},\"phone\":{\"type\":\"string\"},\"phone_second\":{\"type\":\"string\"},\"additional_info\":{\"type\":\"string\"},\"email\":{\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
-(22, 'plugin_content_manager_configuration_content_types::application::footer.footer', '{\"uid\":\"application::footer.footer\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"address\":{\"edit\":{\"label\":\"Address\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Address\",\"searchable\":true,\"sortable\":true}},\"nip\":{\"edit\":{\"label\":\"Nip\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nip\",\"searchable\":true,\"sortable\":true}},\"regon\":{\"edit\":{\"label\":\"Regon\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Regon\",\"searchable\":true,\"sortable\":true}},\"phone\":{\"edit\":{\"label\":\"Phone\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone\",\"searchable\":true,\"sortable\":true}},\"phone_second\":{\"edit\":{\"label\":\"Phone_second\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone_second\",\"searchable\":true,\"sortable\":true}},\"additional_info\":{\"edit\":{\"label\":\"Additional_info\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Additional_info\",\"searchable\":true,\"sortable\":true}},\"email\":{\"edit\":{\"label\":\"Email\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Email\",\"searchable\":true,\"sortable\":true}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"address\",\"nip\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"address\",\"size\":6}],[{\"name\":\"nip\",\"size\":6},{\"name\":\"regon\",\"size\":6}],[{\"name\":\"phone\",\"size\":6},{\"name\":\"phone_second\",\"size\":6}],[{\"name\":\"additional_info\",\"size\":6},{\"name\":\"email\",\"size\":6}]]}}', 'object', '', '');
+(22, 'plugin_content_manager_configuration_content_types::application::footer.footer', '{\"uid\":\"application::footer.footer\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"address\":{\"edit\":{\"label\":\"Address\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Address\",\"searchable\":true,\"sortable\":true}},\"nip\":{\"edit\":{\"label\":\"Nip\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Nip\",\"searchable\":true,\"sortable\":true}},\"regon\":{\"edit\":{\"label\":\"Regon\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Regon\",\"searchable\":true,\"sortable\":true}},\"phone\":{\"edit\":{\"label\":\"Phone\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone\",\"searchable\":true,\"sortable\":true}},\"phone_second\":{\"edit\":{\"label\":\"Phone_second\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Phone_second\",\"searchable\":true,\"sortable\":true}},\"additional_info\":{\"edit\":{\"label\":\"Additional_info\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Additional_info\",\"searchable\":true,\"sortable\":true}},\"email\":{\"edit\":{\"label\":\"Email\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Email\",\"searchable\":true,\"sortable\":true}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"address\",\"nip\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"address\",\"size\":6}],[{\"name\":\"nip\",\"size\":6},{\"name\":\"regon\",\"size\":6}],[{\"name\":\"phone\",\"size\":6},{\"name\":\"phone_second\",\"size\":6}],[{\"name\":\"additional_info\",\"size\":6},{\"name\":\"email\",\"size\":6}]]}}', 'object', '', ''),
+(23, 'model_def_application::nawilzamy.nawilzamy', '{\"uid\":\"application::nawilzamy.nawilzamy\",\"collectionName\":\"moisturizing\",\"kind\":\"singleType\",\"info\":{\"name\":\"Moisturizing\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"image\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(25, 'model_def_application::moisturizing.moisturizing', '{\"uid\":\"application::moisturizing.moisturizing\",\"collectionName\":\"moisturizing\",\"kind\":\"singleType\",\"info\":{\"name\":\"Moisturizing\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"image\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(26, 'plugin_content_manager_configuration_content_types::application::moisturizing.moisturizing', '{\"uid\":\"application::moisturizing.moisturizing\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"image\":{\"edit\":{\"label\":\"Image\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Image\",\"searchable\":false,\"sortable\":false}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"image\",\"published_at\",\"created_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"image\",\"size\":6}]]}}', 'object', '', '');
 
 -- --------------------------------------------------------
 
@@ -93,6 +96,28 @@ CREATE TABLE `footer` (
 
 INSERT INTO `footer` (`id`, `name`, `address`, `nip`, `regon`, `phone`, `phone_second`, `additional_info`, `email`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
 (1, 'My Asia A&K Beauty Krzysztof Chwesiuk', '43-309 Bielsko-Biała, ul. Bystrzańska 70', '547-20-68-255', '242859723', '+48 33 445 42 45', '+44 203 769 7900', 'Oferty hurtowe, napisz: hurt@holika.pl', 'hurt@holika.pl', '2021-02-10 12:46:30', 1, 1, '2021-02-10 11:46:26', '2021-02-10 11:46:30');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `moisturizing`
+--
+
+CREATE TABLE `moisturizing` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `moisturizing`
+--
+
+INSERT INTO `moisturizing` (`id`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, '2021-02-11 10:36:41', 1, 1, '2021-02-11 09:36:06', '2021-02-11 09:36:41');
 
 -- --------------------------------------------------------
 
@@ -196,7 +221,12 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `fields`, `condition
 (51, 'plugins::content-manager.explorer.read', 'application::footer.footer', '[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"]', '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
 (52, 'plugins::content-manager.explorer.update', 'application::footer.footer', '[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"]', '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
 (53, 'plugins::content-manager.explorer.delete', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
-(54, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41');
+(54, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-02-10 11:40:41', '2021-02-10 11:40:41'),
+(60, 'plugins::content-manager.explorer.create', 'application::moisturizing.moisturizing', '[\"image\"]', '[]', 1, '2021-02-11 09:35:49', '2021-02-11 09:35:49'),
+(61, 'plugins::content-manager.explorer.read', 'application::moisturizing.moisturizing', '[\"image\"]', '[]', 1, '2021-02-11 09:35:49', '2021-02-11 09:35:49'),
+(62, 'plugins::content-manager.explorer.update', 'application::moisturizing.moisturizing', '[\"image\"]', '[]', 1, '2021-02-11 09:35:49', '2021-02-11 09:35:49'),
+(63, 'plugins::content-manager.explorer.delete', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-02-11 09:35:49', '2021-02-11 09:35:49'),
+(64, 'plugins::content-manager.explorer.publish', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-02-11 09:35:49', '2021-02-11 09:35:49');
 
 -- --------------------------------------------------------
 
@@ -285,6 +315,13 @@ CREATE TABLE `upload_file` (
   `updated_at` timestamp NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Zrzut danych tabeli `upload_file`
+--
+
+INSERT INTO `upload_file` (`id`, `name`, `alternativeText`, `caption`, `width`, `height`, `formats`, `hash`, `ext`, `mime`, `size`, `url`, `previewUrl`, `provider`, `provider_metadata`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(2, 'moisturize.webp', '', '', 1653, 1882, '{\"thumbnail\":{\"name\":\"thumbnail_moisturize.webp\",\"hash\":\"thumbnail_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":137,\"height\":156,\"size\":4.77,\"path\":null,\"url\":\"/uploads/thumbnail_moisturize_ae30174f65.webp\"},\"large\":{\"name\":\"large_moisturize.webp\",\"hash\":\"large_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":878,\"height\":1000,\"size\":50.26,\"path\":null,\"url\":\"/uploads/large_moisturize_ae30174f65.webp\"},\"medium\":{\"name\":\"medium_moisturize.webp\",\"hash\":\"medium_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":659,\"height\":750,\"size\":34.94,\"path\":null,\"url\":\"/uploads/medium_moisturize_ae30174f65.webp\"},\"small\":{\"name\":\"small_moisturize.webp\",\"hash\":\"small_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":439,\"height\":500,\"size\":20.99,\"path\":null,\"url\":\"/uploads/small_moisturize_ae30174f65.webp\"}}', 'moisturize_ae30174f65', '.webp', 'image/webp', '104.66', '/uploads/moisturize_ae30174f65.webp', NULL, 'local', NULL, 1, 1, '2021-02-11 09:36:02', '2021-02-11 09:36:02');
+
 -- --------------------------------------------------------
 
 --
@@ -299,6 +336,13 @@ CREATE TABLE `upload_file_morph` (
   `field` longtext DEFAULT NULL,
   `order` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `upload_file_morph`
+--
+
+INSERT INTO `upload_file_morph` (`id`, `upload_file_id`, `related_id`, `related_type`, `field`, `order`) VALUES
+(2, 2, 1, 'moisturizing', 'image', 1);
 
 -- --------------------------------------------------------
 
@@ -482,7 +526,13 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (157, 'application', 'footer', 'find', 0, '', 1, NULL, NULL),
 (158, 'application', 'footer', 'find', 1, '', 2, NULL, NULL),
 (159, 'application', 'footer', 'update', 0, '', 1, NULL, NULL),
-(160, 'application', 'footer', 'update', 0, '', 2, NULL, NULL);
+(160, 'application', 'footer', 'update', 0, '', 2, NULL, NULL),
+(167, 'application', 'moisturizing', 'delete', 0, '', 1, NULL, NULL),
+(168, 'application', 'moisturizing', 'delete', 0, '', 2, NULL, NULL),
+(169, 'application', 'moisturizing', 'find', 0, '', 1, NULL, NULL),
+(170, 'application', 'moisturizing', 'find', 1, '', 2, NULL, NULL),
+(171, 'application', 'moisturizing', 'update', 0, '', 1, NULL, NULL),
+(172, 'application', 'moisturizing', 'update', 0, '', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -544,6 +594,12 @@ ALTER TABLE `core_store`
 -- Indeksy dla tabeli `footer`
 --
 ALTER TABLE `footer`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `moisturizing`
+--
+ALTER TABLE `moisturizing`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -619,12 +675,18 @@ ALTER TABLE `users-permissions_user`
 -- AUTO_INCREMENT dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT dla tabeli `footer`
 --
 ALTER TABLE `footer`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `moisturizing`
+--
+ALTER TABLE `moisturizing`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
@@ -637,7 +699,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT dla tabeli `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
 
 --
 -- AUTO_INCREMENT dla tabeli `strapi_role`
@@ -661,19 +723,19 @@ ALTER TABLE `strapi_webhooks`
 -- AUTO_INCREMENT dla tabeli `upload_file`
 --
 ALTER TABLE `upload_file`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `upload_file_morph`
 --
 ALTER TABLE `upload_file_morph`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_permission`
 --
 ALTER TABLE `users-permissions_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=161;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=173;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_role`
