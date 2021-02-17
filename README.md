@@ -52,3 +52,16 @@
    ```sh
     NODE_ENV=production yarn start
    ```
+   
+### Plesk's deploying
+
+In the main project's folder run below commands
+
+```vim
+npm install
+npm ci --scripts-prepend-node-path
+NODE_ENV=production npm run build --scripts-prepend-node-path
+touch ./tmp/restart.txt
+```
+
+
