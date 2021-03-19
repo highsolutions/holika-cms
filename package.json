@@ -1,0 +1,47 @@
+{
+  "name": "strapi-init",
+  "private": true,
+  "version": "0.1.0",
+  "description": "A Strapi application",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "devDependencies": {},
+  "dependencies": {
+    "content-type-parser": "^1.0.2",
+    "csv-parse": "^4.15.1",
+    "get-urls": "^10.0.0",
+    "knex": "<0.20.0",
+    "lodash": "^4.17.20",
+    "moment": "^2.29.1",
+    "mysql": "latest",
+    "request": "^2.88.2",
+    "rss-parser": "^3.11.0",
+    "simple-statistics": "^7.4.0",
+    "strapi": "3.4.6",
+    "strapi-admin": "3.4.6",
+    "strapi-connector-bookshelf": "3.4.6",
+    "strapi-plugin-content-manager": "3.4.6",
+    "strapi-plugin-content-type-builder": "3.4.6",
+    "strapi-plugin-documentation": "3.4.6",
+    "strapi-plugin-email": "3.4.6",
+    "strapi-plugin-upload": "3.4.6",
+    "strapi-plugin-users-permissions": "3.4.6",
+    "strapi-utils": "3.4.6",
+    "striptags": "^3.1.1"
+  },
+  "author": {
+    "name": "A Strapi developer"
+  },
+  "strapi": {
+    "uuid": "149238bf-1f2c-4d33-a5b9-c31acc3c336e"
+  },
+  "engines": {
+    "node": ">=10.16.0 <=14.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}
