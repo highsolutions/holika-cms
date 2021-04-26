@@ -1,0 +1,23 @@
+{
+  "kind": "singleType",
+  "collectionName": "products_to_be_proud_ofs",
+  "info": {
+    "name": "Products To Be Proud Of"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}

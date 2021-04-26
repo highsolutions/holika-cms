@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 17 Lut 2021, 09:16
+-- Czas generowania: 26 Kwi 2021, 12:26
 -- Wersja serwera: 10.5.8-MariaDB
--- Wersja PHP: 7.2.34
+-- Wersja PHP: 7.4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,22 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Baza danych: `holika_cms`
+-- Baza danych: `holika_new`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `bb_creams`
+--
+
+CREATE TABLE `bb_creams` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -75,7 +89,36 @@ INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VA
 (47, 'plugin_content_manager_configuration_content_types::plugins::import-content.importconfig', '{\"uid\":\"plugins::import-content.importconfig\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"source\",\"defaultSortBy\":\"source\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"date\":{\"edit\":{\"label\":\"Date\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Date\",\"searchable\":true,\"sortable\":true}},\"source\":{\"edit\":{\"label\":\"Source\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Source\",\"searchable\":true,\"sortable\":true}},\"options\":{\"edit\":{\"label\":\"Options\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Options\",\"searchable\":false,\"sortable\":false}},\"contentType\":{\"edit\":{\"label\":\"ContentType\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentType\",\"searchable\":true,\"sortable\":true}},\"fieldMapping\":{\"edit\":{\"label\":\"FieldMapping\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"FieldMapping\",\"searchable\":false,\"sortable\":false}},\"ongoing\":{\"edit\":{\"label\":\"Ongoing\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Ongoing\",\"searchable\":true,\"sortable\":true}},\"importeditems\":{\"edit\":{\"label\":\"Importeditems\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"ContentType\"},\"list\":{\"label\":\"Importeditems\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"date\",\"source\",\"contentType\"],\"editRelations\":[\"importeditems\"],\"edit\":[[{\"name\":\"date\",\"size\":4},{\"name\":\"source\",\"size\":6}],[{\"name\":\"options\",\"size\":12}],[{\"name\":\"contentType\",\"size\":6}],[{\"name\":\"fieldMapping\",\"size\":12}],[{\"name\":\"ongoing\",\"size\":4}]]}}', 'object', '', ''),
 (48, 'plugin_content_manager_configuration_content_types::plugins::import-content.importeditem', '{\"uid\":\"plugins::import-content.importeditem\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"ContentType\",\"defaultSortBy\":\"ContentType\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"ContentType\":{\"edit\":{\"label\":\"ContentType\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentType\",\"searchable\":true,\"sortable\":true}},\"ContentId\":{\"edit\":{\"label\":\"ContentId\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ContentId\",\"searchable\":true,\"sortable\":true}},\"importconfig\":{\"edit\":{\"label\":\"Importconfig\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true,\"mainField\":\"source\"},\"list\":{\"label\":\"Importconfig\",\"searchable\":true,\"sortable\":true}},\"importedFiles\":{\"edit\":{\"label\":\"ImportedFiles\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"ImportedFiles\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"ContentType\",\"ContentId\",\"importconfig\"],\"editRelations\":[\"importconfig\"],\"edit\":[[{\"name\":\"ContentType\",\"size\":6},{\"name\":\"ContentId\",\"size\":4}],[{\"name\":\"importedFiles\",\"size\":12}]]}}', 'object', '', ''),
 (49, 'plugin_content_manager_configuration_content_types::application::moisturizing.moisturizing', '{\"uid\":\"application::moisturizing.moisturizing\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"image\":{\"edit\":{\"label\":\"Image\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Image\",\"searchable\":false,\"sortable\":false}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"image\",\"published_at\",\"created_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"image\",\"size\":6}]]}}', 'object', '', ''),
-(50, 'plugin_upload_settings', '{\"sizeOptimization\":true,\"responsiveDimensions\":true}', 'object', 'production', '');
+(50, 'plugin_upload_settings', '{\"sizeOptimization\":true,\"responsiveDimensions\":true}', 'object', 'production', ''),
+(51, 'plugin_documentation_config', '{\"restrictedAccess\":false}', 'object', '', '');
+INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VALUES
+(52, 'model_def_application::designer-packages.designer-packages', '{\"uid\":\"application::designer-packages.designer-packages\",\"collectionName\":\"designer_packages\",\"kind\":\"singleType\",\"info\":{\"name\":\"Designer Packages\",\"description\":\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":false},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(53, 'plugin_content_manager_configuration_content_types::application::designer-packages.designer-packages', '{\"uid\":\"application::designer-packages.designer-packages\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\"],\"edit\":[[{\"name\":\"images\",\"size\":6}]],\"editRelations\":[]}}', 'object', '', ''),
+(54, 'model_def_application::products-to-be-proud-of.products-to-be-proud-of', '{\"uid\":\"application::products-to-be-proud-of.products-to-be-proud-of\",\"collectionName\":\"products_to_be_proud_ofs\",\"kind\":\"singleType\",\"info\":{\"name\":\"Products To Be Proud Of\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"published_at\":{\"type\":\"datetime\",\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(55, 'plugin_content_manager_configuration_content_types::application::products-to-be-proud-of.products-to-be-proud-of', '{\"uid\":\"application::products-to-be-proud-of.products-to-be-proud-of\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"published_at\":{\"edit\":{\"label\":\"Published_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Published_at\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"published_at\",\"created_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', ''),
+(56, 'model_def_application::bb-creams.bb-creams', '{\"uid\":\"application::bb-creams.bb-creams\",\"collectionName\":\"bb_creams\",\"kind\":\"singleType\",\"info\":{\"name\":\"BB Creams\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":false},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":true},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"private\":true}}}', 'object', NULL, NULL),
+(57, 'plugin_content_manager_configuration_content_types::application::bb-creams.bb-creams', '{\"uid\":\"application::bb-creams.bb-creams\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', '');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `designer_packages`
+--
+
+CREATE TABLE `designer_packages` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `designer_packages`
+--
+
+INSERT INTO `designer_packages` (`id`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, 1, 1, '2021-04-26 09:33:26', '2021-04-26 09:33:29');
 
 -- --------------------------------------------------------
 
@@ -243,6 +286,28 @@ INSERT INTO `moisturizing` (`id`, `published_at`, `created_by`, `updated_by`, `c
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `products_to_be_proud_ofs`
+--
+
+CREATE TABLE `products_to_be_proud_ofs` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Zrzut danych tabeli `products_to_be_proud_ofs`
+--
+
+INSERT INTO `products_to_be_proud_ofs` (`id`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
+(1, '2021-04-26 12:22:38', 1, 1, '2021-04-26 10:21:41', '2021-04-26 10:22:38');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `shop_adresses`
 --
 
@@ -385,7 +450,23 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `fields`, `condition
 (121, 'plugins::content-manager.explorer.update', 'application::moisturizing.moisturizing', '[\"image\"]', '[]', 1, '2021-02-16 09:12:39', '2021-02-16 09:12:39'),
 (122, 'plugins::content-manager.explorer.read', 'application::moisturizing.moisturizing', '[\"image\"]', '[]', 1, '2021-02-16 09:12:39', '2021-02-16 09:12:39'),
 (123, 'plugins::content-manager.explorer.delete', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-02-16 09:12:39', '2021-02-16 09:12:39'),
-(124, 'plugins::content-manager.explorer.publish', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-02-16 09:12:39', '2021-02-16 09:12:39');
+(124, 'plugins::content-manager.explorer.publish', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-02-16 09:12:39', '2021-02-16 09:12:39'),
+(125, 'plugins::documentation.read', NULL, NULL, '[]', 1, '2021-04-26 05:24:53', '2021-04-26 05:24:53'),
+(126, 'plugins::documentation.settings.update', NULL, NULL, '[]', 1, '2021-04-26 05:24:53', '2021-04-26 05:24:53'),
+(127, 'plugins::documentation.settings.regenerate', NULL, NULL, '[]', 1, '2021-04-26 05:24:53', '2021-04-26 05:24:53'),
+(128, 'plugins::content-manager.explorer.create', 'application::designer-packages.designer-packages', '[\"images\"]', '[]', 1, '2021-04-26 09:33:05', '2021-04-26 09:33:05'),
+(129, 'plugins::content-manager.explorer.read', 'application::designer-packages.designer-packages', '[\"images\"]', '[]', 1, '2021-04-26 09:33:05', '2021-04-26 09:33:05'),
+(130, 'plugins::content-manager.explorer.update', 'application::designer-packages.designer-packages', '[\"images\"]', '[]', 1, '2021-04-26 09:33:05', '2021-04-26 09:33:05'),
+(131, 'plugins::content-manager.explorer.delete', 'application::designer-packages.designer-packages', NULL, '[]', 1, '2021-04-26 09:33:05', '2021-04-26 09:33:05'),
+(133, 'plugins::content-manager.explorer.create', 'application::products-to-be-proud-of.products-to-be-proud-of', '[\"images\"]', '[]', 1, '2021-04-26 10:20:15', '2021-04-26 10:20:15'),
+(134, 'plugins::content-manager.explorer.read', 'application::products-to-be-proud-of.products-to-be-proud-of', '[\"images\"]', '[]', 1, '2021-04-26 10:20:15', '2021-04-26 10:20:15'),
+(135, 'plugins::content-manager.explorer.update', 'application::products-to-be-proud-of.products-to-be-proud-of', '[\"images\"]', '[]', 1, '2021-04-26 10:20:15', '2021-04-26 10:20:15'),
+(136, 'plugins::content-manager.explorer.delete', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-26 10:20:15', '2021-04-26 10:20:15'),
+(137, 'plugins::content-manager.explorer.publish', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-26 10:20:15', '2021-04-26 10:20:15'),
+(138, 'plugins::content-manager.explorer.create', 'application::bb-creams.bb-creams', '[\"images\"]', '[]', 1, '2021-04-26 10:24:46', '2021-04-26 10:24:46'),
+(139, 'plugins::content-manager.explorer.read', 'application::bb-creams.bb-creams', '[\"images\"]', '[]', 1, '2021-04-26 10:24:46', '2021-04-26 10:24:46'),
+(140, 'plugins::content-manager.explorer.update', 'application::bb-creams.bb-creams', '[\"images\"]', '[]', 1, '2021-04-26 10:24:46', '2021-04-26 10:24:46'),
+(141, 'plugins::content-manager.explorer.delete', 'application::bb-creams.bb-creams', NULL, '[]', 1, '2021-04-26 10:24:46', '2021-04-26 10:24:46');
 
 -- --------------------------------------------------------
 
@@ -479,7 +560,9 @@ CREATE TABLE `upload_file` (
 --
 
 INSERT INTO `upload_file` (`id`, `name`, `alternativeText`, `caption`, `width`, `height`, `formats`, `hash`, `ext`, `mime`, `size`, `url`, `previewUrl`, `provider`, `provider_metadata`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
-(2, 'moisturize.webp', '', '', 1653, 1882, '{\"thumbnail\":{\"name\":\"thumbnail_moisturize.webp\",\"hash\":\"thumbnail_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":137,\"height\":156,\"size\":4.77,\"path\":null,\"url\":\"/uploads/thumbnail_moisturize_ae30174f65.webp\"},\"large\":{\"name\":\"large_moisturize.webp\",\"hash\":\"large_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":878,\"height\":1000,\"size\":50.26,\"path\":null,\"url\":\"/uploads/large_moisturize_ae30174f65.webp\"},\"medium\":{\"name\":\"medium_moisturize.webp\",\"hash\":\"medium_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":659,\"height\":750,\"size\":34.94,\"path\":null,\"url\":\"/uploads/medium_moisturize_ae30174f65.webp\"},\"small\":{\"name\":\"small_moisturize.webp\",\"hash\":\"small_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":439,\"height\":500,\"size\":20.99,\"path\":null,\"url\":\"/uploads/small_moisturize_ae30174f65.webp\"}}', 'moisturize_ae30174f65', '.webp', 'image/webp', '104.66', '/uploads/moisturize_ae30174f65.webp', NULL, 'local', NULL, 1, 1, '2021-02-11 09:36:02', '2021-02-11 09:36:02');
+(2, 'moisturize.webp', '', '', 1653, 1882, '{\"thumbnail\":{\"name\":\"thumbnail_moisturize.webp\",\"hash\":\"thumbnail_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":137,\"height\":156,\"size\":4.77,\"path\":null,\"url\":\"/uploads/thumbnail_moisturize_ae30174f65.webp\"},\"large\":{\"name\":\"large_moisturize.webp\",\"hash\":\"large_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":878,\"height\":1000,\"size\":50.26,\"path\":null,\"url\":\"/uploads/large_moisturize_ae30174f65.webp\"},\"medium\":{\"name\":\"medium_moisturize.webp\",\"hash\":\"medium_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":659,\"height\":750,\"size\":34.94,\"path\":null,\"url\":\"/uploads/medium_moisturize_ae30174f65.webp\"},\"small\":{\"name\":\"small_moisturize.webp\",\"hash\":\"small_moisturize_ae30174f65\",\"ext\":\".webp\",\"mime\":\"image/webp\",\"width\":439,\"height\":500,\"size\":20.99,\"path\":null,\"url\":\"/uploads/small_moisturize_ae30174f65.webp\"}}', 'moisturize_ae30174f65', '.webp', 'image/webp', '104.66', '/uploads/moisturize_ae30174f65.webp', NULL, 'local', NULL, 1, 1, '2021-02-11 09:36:02', '2021-02-11 09:36:02'),
+(3, '202102271246211000.jpg', '', '', 2354, 3177, '{\"thumbnail\":{\"name\":\"thumbnail_202102271246211000.jpg\",\"hash\":\"thumbnail_202102271246211000_cf0b2eccdc\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":116,\"height\":156,\"size\":2.81,\"path\":null,\"url\":\"/uploads/thumbnail_202102271246211000_cf0b2eccdc.jpg\"},\"large\":{\"name\":\"large_202102271246211000.jpg\",\"hash\":\"large_202102271246211000_cf0b2eccdc\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":741,\"height\":1000,\"size\":88.1,\"path\":null,\"url\":\"/uploads/large_202102271246211000_cf0b2eccdc.jpg\"},\"medium\":{\"name\":\"medium_202102271246211000.jpg\",\"hash\":\"medium_202102271246211000_cf0b2eccdc\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":556,\"height\":750,\"size\":53.62,\"path\":null,\"url\":\"/uploads/medium_202102271246211000_cf0b2eccdc.jpg\"},\"small\":{\"name\":\"small_202102271246211000.jpg\",\"hash\":\"small_202102271246211000_cf0b2eccdc\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":370,\"height\":500,\"size\":26.83,\"path\":null,\"url\":\"/uploads/small_202102271246211000_cf0b2eccdc.jpg\"}}', '202102271246211000_cf0b2eccdc', '.jpg', 'image/jpeg', '555.87', '/uploads/202102271246211000_cf0b2eccdc.jpg', NULL, 'local', NULL, 1, 1, '2021-04-26 09:33:22', '2021-04-26 09:33:23'),
+(4, '202102271246211001.jpg', '', '', 2449, 3260, '{\"thumbnail\":{\"name\":\"thumbnail_202102271246211001.jpg\",\"hash\":\"thumbnail_202102271246211001_d8d26bd05f\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":117,\"height\":156,\"size\":2.22,\"path\":null,\"url\":\"/uploads/thumbnail_202102271246211001_d8d26bd05f.jpg\"},\"large\":{\"name\":\"large_202102271246211001.jpg\",\"hash\":\"large_202102271246211001_d8d26bd05f\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":751,\"height\":1000,\"size\":78.32,\"path\":null,\"url\":\"/uploads/large_202102271246211001_d8d26bd05f.jpg\"},\"medium\":{\"name\":\"medium_202102271246211001.jpg\",\"hash\":\"medium_202102271246211001_d8d26bd05f\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":563,\"height\":750,\"size\":46.17,\"path\":null,\"url\":\"/uploads/medium_202102271246211001_d8d26bd05f.jpg\"},\"small\":{\"name\":\"small_202102271246211001.jpg\",\"hash\":\"small_202102271246211001_d8d26bd05f\",\"ext\":\".jpg\",\"mime\":\"image/jpeg\",\"width\":376,\"height\":500,\"size\":22.76,\"path\":null,\"url\":\"/uploads/small_202102271246211001_d8d26bd05f.jpg\"}}', '202102271246211001_d8d26bd05f', '.jpg', 'image/jpeg', '536.89', '/uploads/202102271246211001_d8d26bd05f.jpg', NULL, 'local', NULL, 1, 1, '2021-04-26 09:33:23', '2021-04-26 09:33:23');
 
 -- --------------------------------------------------------
 
@@ -501,7 +584,11 @@ CREATE TABLE `upload_file_morph` (
 --
 
 INSERT INTO `upload_file_morph` (`id`, `upload_file_id`, `related_id`, `related_type`, `field`, `order`) VALUES
-(2, 2, 1, 'moisturizing', 'image', 1);
+(2, 2, 1, 'moisturizing', 'image', 1),
+(3, 3, 1, 'designer_packages', 'images', 1),
+(4, 4, 1, 'designer_packages', 'images', 2),
+(5, 2, 1, 'products_to_be_proud_ofs', 'images', 1),
+(6, 4, 1, 'products_to_be_proud_ofs', 'images', 2);
 
 -- --------------------------------------------------------
 
@@ -733,7 +820,39 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (323, 'application', 'moisturizing', 'find', 0, '', 1, NULL, NULL),
 (324, 'application', 'moisturizing', 'find', 0, '', 2, NULL, NULL),
 (325, 'application', 'moisturizing', 'update', 0, '', 1, NULL, NULL),
-(326, 'application', 'moisturizing', 'update', 0, '', 2, NULL, NULL);
+(326, 'application', 'moisturizing', 'update', 0, '', 2, NULL, NULL),
+(327, 'documentation', 'documentation', 'deletedoc', 0, '', 1, NULL, NULL),
+(328, 'documentation', 'documentation', 'deletedoc', 0, '', 2, NULL, NULL),
+(329, 'documentation', 'documentation', 'getinfos', 0, '', 1, NULL, NULL),
+(330, 'documentation', 'documentation', 'getinfos', 0, '', 2, NULL, NULL),
+(331, 'documentation', 'documentation', 'index', 0, '', 1, NULL, NULL),
+(332, 'documentation', 'documentation', 'index', 0, '', 2, NULL, NULL),
+(333, 'documentation', 'documentation', 'login', 0, '', 1, NULL, NULL),
+(334, 'documentation', 'documentation', 'login', 0, '', 2, NULL, NULL),
+(335, 'documentation', 'documentation', 'loginview', 0, '', 1, NULL, NULL),
+(336, 'documentation', 'documentation', 'loginview', 0, '', 2, NULL, NULL),
+(337, 'documentation', 'documentation', 'regeneratedoc', 0, '', 1, NULL, NULL),
+(338, 'documentation', 'documentation', 'regeneratedoc', 0, '', 2, NULL, NULL),
+(339, 'documentation', 'documentation', 'updatesettings', 0, '', 1, NULL, NULL),
+(340, 'documentation', 'documentation', 'updatesettings', 0, '', 2, NULL, NULL),
+(341, 'application', 'designer-packages', 'delete', 0, '', 1, NULL, NULL),
+(342, 'application', 'designer-packages', 'delete', 0, '', 2, NULL, NULL),
+(343, 'application', 'designer-packages', 'find', 0, '', 1, NULL, NULL),
+(344, 'application', 'designer-packages', 'find', 1, '', 2, NULL, NULL),
+(345, 'application', 'designer-packages', 'update', 0, '', 1, NULL, NULL),
+(346, 'application', 'designer-packages', 'update', 0, '', 2, NULL, NULL),
+(347, 'application', 'products-to-be-proud-of', 'delete', 0, '', 1, NULL, NULL),
+(348, 'application', 'products-to-be-proud-of', 'delete', 0, '', 2, NULL, NULL),
+(349, 'application', 'products-to-be-proud-of', 'find', 0, '', 1, NULL, NULL),
+(350, 'application', 'products-to-be-proud-of', 'find', 1, '', 2, NULL, NULL),
+(351, 'application', 'products-to-be-proud-of', 'update', 0, '', 1, NULL, NULL),
+(352, 'application', 'products-to-be-proud-of', 'update', 0, '', 2, NULL, NULL),
+(353, 'application', 'bb-creams', 'delete', 0, '', 1, NULL, NULL),
+(354, 'application', 'bb-creams', 'delete', 0, '', 2, NULL, NULL),
+(355, 'application', 'bb-creams', 'find', 0, '', 1, NULL, NULL),
+(356, 'application', 'bb-creams', 'find', 1, '', 2, NULL, NULL),
+(357, 'application', 'bb-creams', 'update', 0, '', 1, NULL, NULL),
+(358, 'application', 'bb-creams', 'update', 0, '', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -786,9 +905,21 @@ CREATE TABLE `users-permissions_user` (
 --
 
 --
+-- Indeksy dla tabeli `bb_creams`
+--
+ALTER TABLE `bb_creams`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `designer_packages`
+--
+ALTER TABLE `designer_packages`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -837,6 +968,12 @@ ALTER TABLE `importeditems`
 -- Indeksy dla tabeli `moisturizing`
 --
 ALTER TABLE `moisturizing`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `products_to_be_proud_ofs`
+--
+ALTER TABLE `products_to_be_proud_ofs`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -915,10 +1052,22 @@ ALTER TABLE `users-permissions_user`
 --
 
 --
+-- AUTO_INCREMENT dla tabeli `bb_creams`
+--
+ALTER TABLE `bb_creams`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=58;
+
+--
+-- AUTO_INCREMENT dla tabeli `designer_packages`
+--
+ALTER TABLE `designer_packages`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `footer`
@@ -969,6 +1118,12 @@ ALTER TABLE `moisturizing`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
+-- AUTO_INCREMENT dla tabeli `products_to_be_proud_ofs`
+--
+ALTER TABLE `products_to_be_proud_ofs`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
 -- AUTO_INCREMENT dla tabeli `shop_adresses`
 --
 ALTER TABLE `shop_adresses`
@@ -984,7 +1139,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT dla tabeli `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=125;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=142;
 
 --
 -- AUTO_INCREMENT dla tabeli `strapi_role`
@@ -1008,19 +1163,19 @@ ALTER TABLE `strapi_webhooks`
 -- AUTO_INCREMENT dla tabeli `upload_file`
 --
 ALTER TABLE `upload_file`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT dla tabeli `upload_file_morph`
 --
 ALTER TABLE `upload_file_morph`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_permission`
 --
 ALTER TABLE `users-permissions_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=327;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=359;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_role`

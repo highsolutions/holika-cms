@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/products-to-be-proud-of",
+      "handler": "products-to-be-proud-of.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/products-to-be-proud-of",
+      "handler": "products-to-be-proud-of.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/products-to-be-proud-of",
+      "handler": "products-to-be-proud-of.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

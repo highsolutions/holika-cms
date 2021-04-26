@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "designer_packages",
+  "info": {
+    "name": "Designer Packages",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": true
+    }
+  }
+}
