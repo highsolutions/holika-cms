@@ -14,7 +14,7 @@
       "name": "Apache 2.0",
       "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
     },
-    "x-generation-date": "04/26/2021 2:25:34 PM"
+    "x-generation-date": "04/26/2021 2:41:06 PM"
   },
   "x-strapi-config": {
     "path": "/documentation",
@@ -4222,8 +4222,7 @@
     "schemas": {
       "Bb-creams": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {
@@ -4313,8 +4312,7 @@
       },
       "Designer-packages": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {
@@ -4576,8 +4574,7 @@
       },
       "Products-to-be-proud-of": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {

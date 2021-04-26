@@ -317,8 +317,7 @@
     "schemas": {
       "Products-to-be-proud-of": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {

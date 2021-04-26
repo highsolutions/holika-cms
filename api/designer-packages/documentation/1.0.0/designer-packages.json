@@ -317,8 +317,7 @@
     "schemas": {
       "Designer-packages": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {

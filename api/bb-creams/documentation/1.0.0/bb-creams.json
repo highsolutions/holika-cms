@@ -317,8 +317,7 @@
     "schemas": {
       "Bb-creams": {
         "required": [
-          "id",
-          "images"
+          "id"
         ],
         "properties": {
           "id": {
