@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/designer-packages",
+      "handler": "designer-packages.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/designer-packages",
+      "handler": "designer-packages.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/designer-packages",
+      "handler": "designer-packages.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

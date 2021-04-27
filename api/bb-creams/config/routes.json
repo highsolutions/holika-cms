@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/bb-creams",
+      "handler": "bb-creams.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/bb-creams",
+      "handler": "bb-creams.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/bb-creams",
+      "handler": "bb-creams.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

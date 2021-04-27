@@ -1,0 +1,24 @@
+{
+  "kind": "singleType",
+  "collectionName": "bb_creams",
+  "info": {
+    "name": "BB Creams",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "attributes": {
+    "images": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images"
+      ],
+      "plugin": "upload",
+      "required": false
+    }
+  }
+}
