@@ -342,6 +342,64 @@
           "email": {
             "type": "string"
           },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "address": {
+                  "type": "string"
+                },
+                "nip": {
+                  "type": "string"
+                },
+                "regon": {
+                  "type": "string"
+                },
+                "phone": {
+                  "type": "string"
+                },
+                "phone_second": {
+                  "type": "string"
+                },
+                "additional_info": {
+                  "type": "string"
+                },
+                "email": {
+                  "type": "string"
+                },
+                "localizations": {
+                  "type": "array",
+                  "items": {
+                    "type": "string"
+                  }
+                },
+                "locale": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "locale": {
+            "type": "string"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -372,6 +430,15 @@
             "type": "string"
           },
           "email": {
+            "type": "string"
+          },
+          "localizations": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "locale": {
             "type": "string"
           },
           "published_at": {
