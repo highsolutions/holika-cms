@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/dot-over-i",
+      "handler": "dot-over-i.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/dot-over-i",
+      "handler": "dot-over-i.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/dot-over-i",
+      "handler": "dot-over-i.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}

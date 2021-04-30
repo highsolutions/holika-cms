@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Czas generowania: 27 Kwi 2021, 07:37
+-- Czas generowania: 30 Kwi 2021, 12:48
 -- Wersja serwera: 10.5.8-MariaDB
 -- Wersja PHP: 7.4.14
 
@@ -29,6 +29,21 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `bb_creams` (
   `id` int(10) UNSIGNED NOT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `cares`
+--
+
+CREATE TABLE `cares` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `published_at` datetime DEFAULT NULL,
   `created_by` int(11) DEFAULT NULL,
   `updated_by` int(11) DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT current_timestamp(),
@@ -101,7 +116,19 @@ INSERT INTO `core_store` (`id`, `key`, `value`, `type`, `environment`, `tag`) VA
 (58, 'core_admin_auth', '{\"providers\":{\"autoRegister\":false,\"defaultRole\":null}}', 'object', '', ''),
 (59, 'model_def_plugins::i18n.locale', '{\"uid\":\"plugins::i18n.locale\",\"collectionName\":\"i18n_locales\",\"kind\":\"collectionType\",\"info\":{\"name\":\"locale\",\"description\":\"\"},\"options\":{\"timestamps\":[\"created_at\",\"updated_at\"]},\"pluginOptions\":{\"content-manager\":{\"visible\":false},\"content-type-builder\":{\"visible\":false}},\"attributes\":{\"name\":{\"type\":\"string\",\"min\":1,\"max\":50,\"configurable\":false},\"code\":{\"type\":\"string\",\"unique\":true,\"configurable\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
 (60, 'plugin_content_manager_configuration_content_types::plugins::i18n.locale', '{\"uid\":\"plugins::i18n.locale\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"name\",\"defaultSortBy\":\"name\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"name\":{\"edit\":{\"label\":\"Name\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Name\",\"searchable\":true,\"sortable\":true}},\"code\":{\"edit\":{\"label\":\"Code\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Code\",\"searchable\":true,\"sortable\":true}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"name\",\"code\",\"created_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"name\",\"size\":6},{\"name\":\"code\",\"size\":6}]]}}', 'object', '', ''),
-(61, 'plugin_i18n_default_locale', '\"pl\"', 'string', '', '');
+(61, 'plugin_i18n_default_locale', '\"pl\"', 'string', '', ''),
+(62, 'model_def_application::care.care', '{\"uid\":\"application::care.care\",\"collectionName\":\"cares\",\"kind\":\"singleType\",\"info\":{\"name\":\"Care\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{}},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(63, 'plugin_content_manager_configuration_content_types::application::care.care', '{\"uid\":\"application::care.care\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', ''),
+(64, 'model_def_application::propositions-and-opportunities.propositions-and-opportunities', '{\"uid\":\"application::propositions-and-opportunities.propositions-and-opportunities\",\"collectionName\":\"propositions_and_opportunities\",\"kind\":\"singleType\",\"info\":{\"name\":\"Propositions and Opportunities\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{\"i18n\":{\"localized\":true}},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{\"i18n\":{\"localized\":true}}},\"localizations\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"collection\":\"propositions-and-opportunities\",\"populate\":[\"id\",\"locale\",\"published_at\"],\"attribute\":\"propositions-and-opportunity\",\"column\":\"id\",\"isVirtual\":true},\"locale\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(65, 'plugin_content_manager_configuration_content_types::application::propositions-and-opportunities.propositions-and-opportunities', '{\"uid\":\"application::propositions-and-opportunities.propositions-and-opportunities\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', ''),
+(66, 'model_def_application::makeup.makeup', '{\"uid\":\"application::makeup.makeup\",\"collectionName\":\"makeups\",\"kind\":\"singleType\",\"info\":{\"name\":\"Makeup\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{\"i18n\":{\"localized\":true}},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{\"i18n\":{\"localized\":true}}},\"localizations\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"collection\":\"makeup\",\"populate\":[\"id\",\"locale\",\"published_at\"],\"attribute\":\"related_makeup\",\"column\":\"id\",\"isVirtual\":true},\"locale\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(67, 'plugin_content_manager_configuration_content_types::application::makeup.makeup', '{\"uid\":\"application::makeup.makeup\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', ''),
+(68, 'model_def_application::film-1.film-1', '{\"uid\":\"application::film-1.film-1\",\"collectionName\":\"film_1s\",\"kind\":\"singleType\",\"info\":{\"name\":\"Film 1\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{\"i18n\":{\"localized\":true}},\"attributes\":{\"movie\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"videos\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{\"i18n\":{\"localized\":true}}},\"localizations\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"collection\":\"film-1\",\"populate\":[\"id\",\"locale\",\"published_at\"],\"attribute\":\"film-1\",\"column\":\"id\",\"isVirtual\":true},\"locale\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(69, 'plugin_content_manager_configuration_content_types::application::film-1.film-1', '{\"uid\":\"application::film-1.film-1\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"movie\":{\"edit\":{\"label\":\"Movie\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Movie\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"movie\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"movie\",\"size\":6}]]}}', 'object', '', ''),
+(70, 'model_def_application::film-2.film-2', '{\"uid\":\"application::film-2.film-2\",\"collectionName\":\"film_2s\",\"kind\":\"singleType\",\"info\":{\"name\":\"Film 2\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{\"i18n\":{\"localized\":true}},\"attributes\":{\"movie\":{\"model\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"videos\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{\"i18n\":{\"localized\":true}}},\"localizations\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"collection\":\"film-2\",\"populate\":[\"id\",\"locale\",\"published_at\"],\"attribute\":\"film-2\",\"column\":\"id\",\"isVirtual\":true},\"locale\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(71, 'plugin_content_manager_configuration_content_types::application::film-2.film-2', '{\"uid\":\"application::film-2.film-2\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"movie\":{\"edit\":{\"label\":\"Movie\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Movie\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"movie\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"movie\",\"size\":6}]]}}', 'object', '', ''),
+(72, 'model_def_application::dot-over-i.dot-over-i', '{\"uid\":\"application::dot-over-i.dot-over-i\",\"collectionName\":\"dot_over_i_s\",\"kind\":\"singleType\",\"info\":{\"name\":\"Dot over \\\"i\\\"\"},\"options\":{\"increments\":true,\"timestamps\":[\"created_at\",\"updated_at\"],\"draftAndPublish\":true},\"pluginOptions\":{\"i18n\":{\"localized\":true}},\"attributes\":{\"images\":{\"collection\":\"file\",\"via\":\"related\",\"allowedTypes\":[\"images\"],\"plugin\":\"upload\",\"required\":false,\"pluginOptions\":{\"i18n\":{\"localized\":true}}},\"localizations\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"collection\":\"dot-over-i\",\"populate\":[\"id\",\"locale\",\"published_at\"],\"attribute\":\"dot-over-i\",\"column\":\"id\",\"isVirtual\":true},\"locale\":{\"writable\":true,\"private\":false,\"configurable\":false,\"visible\":false,\"type\":\"string\"},\"published_at\":{\"type\":\"datetime\",\"configurable\":false,\"writable\":true,\"visible\":false},\"created_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true},\"updated_by\":{\"model\":\"user\",\"plugin\":\"admin\",\"configurable\":false,\"writable\":false,\"visible\":false,\"private\":true}}}', 'object', NULL, NULL),
+(73, 'plugin_content_manager_configuration_content_types::application::dot-over-i.dot-over-i', '{\"uid\":\"application::dot-over-i.dot-over-i\",\"settings\":{\"bulkable\":true,\"filterable\":true,\"searchable\":true,\"pageSize\":10,\"mainField\":\"id\",\"defaultSortBy\":\"id\",\"defaultSortOrder\":\"ASC\"},\"metadatas\":{\"id\":{\"edit\":{},\"list\":{\"label\":\"Id\",\"searchable\":true,\"sortable\":true}},\"images\":{\"edit\":{\"label\":\"Images\",\"description\":\"\",\"placeholder\":\"\",\"visible\":true,\"editable\":true},\"list\":{\"label\":\"Images\",\"searchable\":false,\"sortable\":false}},\"created_at\":{\"edit\":{\"label\":\"Created_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Created_at\",\"searchable\":true,\"sortable\":true}},\"updated_at\":{\"edit\":{\"label\":\"Updated_at\",\"description\":\"\",\"placeholder\":\"\",\"visible\":false,\"editable\":true},\"list\":{\"label\":\"Updated_at\",\"searchable\":true,\"sortable\":true}}},\"layouts\":{\"list\":[\"id\",\"images\",\"created_at\",\"updated_at\"],\"editRelations\":[],\"edit\":[[{\"name\":\"images\",\"size\":6}]]}}', 'object', '', '');
 
 -- --------------------------------------------------------
 
@@ -123,6 +150,90 @@ CREATE TABLE `designer_packages` (
 
 INSERT INTO `designer_packages` (`id`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
 (1, 1, 1, '2021-04-26 09:33:26', '2021-04-26 10:40:45');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `dot_over_i_s`
+--
+
+CREATE TABLE `dot_over_i_s` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `dot_over_i_s__localizations`
+--
+
+CREATE TABLE `dot_over_i_s__localizations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `dot_over_i__id` int(11) DEFAULT NULL,
+  `dot-over-i_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `film_1s`
+--
+
+CREATE TABLE `film_1s` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `film_1s__localizations`
+--
+
+CREATE TABLE `film_1s__localizations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `film_1_id` int(11) DEFAULT NULL,
+  `film-1_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `film_2s`
+--
+
+CREATE TABLE `film_2s` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `film_2s__localizations`
+--
+
+CREATE TABLE `film_2s__localizations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `film_2_id` int(11) DEFAULT NULL,
+  `film-2_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -305,6 +416,34 @@ CREATE TABLE `importeditems` (
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `makeups`
+--
+
+CREATE TABLE `makeups` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `makeups__localizations`
+--
+
+CREATE TABLE `makeups__localizations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `makeup_id` int(11) DEFAULT NULL,
+  `related_makeup_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `moisturizing`
 --
 
@@ -345,6 +484,34 @@ CREATE TABLE `products_to_be_proud_ofs` (
 
 INSERT INTO `products_to_be_proud_ofs` (`id`, `published_at`, `created_by`, `updated_by`, `created_at`, `updated_at`) VALUES
 (1, '2021-04-26 12:22:38', 1, 1, '2021-04-26 10:21:41', '2021-04-26 10:41:11');
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `propositions_and_opportunities`
+--
+
+CREATE TABLE `propositions_and_opportunities` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `locale` varchar(255) DEFAULT NULL,
+  `published_at` datetime DEFAULT NULL,
+  `created_by` int(11) DEFAULT NULL,
+  `updated_by` int(11) DEFAULT NULL,
+  `created_at` timestamp NULL DEFAULT current_timestamp(),
+  `updated_at` timestamp NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `propositions_and_opportunities__localizations`
+--
+
+CREATE TABLE `propositions_and_opportunities__localizations` (
+  `id` int(10) UNSIGNED NOT NULL,
+  `propositions_and_opportunity_id` int(11) DEFAULT NULL,
+  `propositions-and-opportunity_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -509,25 +676,55 @@ INSERT INTO `strapi_permission` (`id`, `action`, `subject`, `fields`, `condition
 (221, 'plugins::i18n.locale.read', NULL, NULL, '[]', 1, '2021-04-27 05:19:45', '2021-04-27 05:19:45', '{}'),
 (222, 'plugins::i18n.locale.update', NULL, NULL, '[]', 1, '2021-04-27 05:19:45', '2021-04-27 05:19:45', '{}'),
 (223, 'plugins::i18n.locale.delete', NULL, NULL, '[]', 1, '2021-04-27 05:19:45', '2021-04-27 05:19:45', '{}'),
-(243, 'plugins::content-manager.explorer.delete', 'application::bb-creams.bb-creams', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(244, 'plugins::content-manager.explorer.delete', 'application::designer-packages.designer-packages', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(246, 'plugins::content-manager.explorer.delete', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(247, 'plugins::content-manager.explorer.delete', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(249, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(250, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importconfig', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(251, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importeditem', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(253, 'plugins::content-manager.explorer.publish', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
-(254, 'plugins::content-manager.explorer.publish', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-27 05:27:42', '2021-04-27 05:27:42', '{}'),
 (256, 'plugins::content-manager.explorer.create', 'application::footer.footer', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"],\"locales\":[\"en\",\"pl\"]}'),
 (257, 'plugins::content-manager.explorer.create', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"],\"locales\":[\"en\",\"pl\"]}'),
 (258, 'plugins::content-manager.explorer.read', 'application::footer.footer', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"],\"locales\":[\"en\",\"pl\"]}'),
 (259, 'plugins::content-manager.explorer.read', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"],\"locales\":[\"en\",\"pl\"]}'),
 (260, 'plugins::content-manager.explorer.update', 'application::footer.footer', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"address\",\"nip\",\"regon\",\"phone\",\"phone_second\",\"additional_info\",\"email\"],\"locales\":[\"en\",\"pl\"]}'),
 (261, 'plugins::content-manager.explorer.update', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"fields\":[\"name\",\"email\",\"phone\",\"content\",\"street\",\"city\",\"postal_code\",\"website\",\"latitude\",\"longitude\"],\"locales\":[\"en\",\"pl\"]}'),
-(262, 'plugins::content-manager.explorer.delete', 'application::footer.footer', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"locales\":[\"en\",\"pl\"]}'),
-(263, 'plugins::content-manager.explorer.delete', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"locales\":[\"en\",\"pl\"]}'),
-(264, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"locales\":[\"en\",\"pl\"]}'),
-(265, 'plugins::content-manager.explorer.publish', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-27 05:34:24', '2021-04-27 05:34:24', '{\"locales\":[\"en\",\"pl\"]}');
+(279, 'plugins::content-manager.explorer.create', 'application::care.care', NULL, '[]', 1, '2021-04-29 09:55:26', '2021-04-29 09:55:26', '{\"fields\":[\"images\"]}'),
+(280, 'plugins::content-manager.explorer.read', 'application::care.care', NULL, '[]', 1, '2021-04-29 09:55:26', '2021-04-29 09:55:26', '{\"fields\":[\"images\"]}'),
+(281, 'plugins::content-manager.explorer.update', 'application::care.care', NULL, '[]', 1, '2021-04-29 09:55:26', '2021-04-29 09:55:26', '{\"fields\":[\"images\"]}'),
+(297, 'plugins::content-manager.explorer.create', 'application::propositions-and-opportunities.propositions-and-opportunities', NULL, '[]', 1, '2021-04-29 09:58:35', '2021-04-29 09:58:35', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(298, 'plugins::content-manager.explorer.read', 'application::propositions-and-opportunities.propositions-and-opportunities', NULL, '[]', 1, '2021-04-29 09:58:35', '2021-04-29 09:58:35', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(299, 'plugins::content-manager.explorer.update', 'application::propositions-and-opportunities.propositions-and-opportunities', NULL, '[]', 1, '2021-04-29 09:58:35', '2021-04-29 09:58:35', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(317, 'plugins::content-manager.explorer.create', 'application::makeup.makeup', NULL, '[]', 1, '2021-04-29 10:17:03', '2021-04-29 10:17:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(318, 'plugins::content-manager.explorer.read', 'application::makeup.makeup', NULL, '[]', 1, '2021-04-29 10:17:03', '2021-04-29 10:17:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(319, 'plugins::content-manager.explorer.update', 'application::makeup.makeup', NULL, '[]', 1, '2021-04-29 10:17:03', '2021-04-29 10:17:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(358, 'plugins::content-manager.explorer.create', 'application::film-1.film-1', NULL, '[]', 1, '2021-04-30 10:42:00', '2021-04-30 10:42:00', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(359, 'plugins::content-manager.explorer.read', 'application::film-1.film-1', NULL, '[]', 1, '2021-04-30 10:42:00', '2021-04-30 10:42:00', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(360, 'plugins::content-manager.explorer.update', 'application::film-1.film-1', NULL, '[]', 1, '2021-04-30 10:42:00', '2021-04-30 10:42:00', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(382, 'plugins::content-manager.explorer.create', 'application::film-2.film-2', NULL, '[]', 1, '2021-04-30 10:42:46', '2021-04-30 10:42:46', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(383, 'plugins::content-manager.explorer.read', 'application::film-2.film-2', NULL, '[]', 1, '2021-04-30 10:42:46', '2021-04-30 10:42:46', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(384, 'plugins::content-manager.explorer.update', 'application::film-2.film-2', NULL, '[]', 1, '2021-04-30 10:42:46', '2021-04-30 10:42:46', '{\"fields\":[\"movie\"],\"locales\":[\"en\",\"pl\"]}'),
+(408, 'plugins::content-manager.explorer.create', 'application::dot-over-i.dot-over-i', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(409, 'plugins::content-manager.explorer.read', 'application::dot-over-i.dot-over-i', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(410, 'plugins::content-manager.explorer.update', 'application::dot-over-i.dot-over-i', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"fields\":[\"images\"],\"locales\":[\"en\",\"pl\"]}'),
+(411, 'plugins::content-manager.explorer.delete', 'application::bb-creams.bb-creams', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(412, 'plugins::content-manager.explorer.delete', 'application::care.care', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(413, 'plugins::content-manager.explorer.delete', 'application::designer-packages.designer-packages', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(414, 'plugins::content-manager.explorer.delete', 'application::dot-over-i.dot-over-i', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(415, 'plugins::content-manager.explorer.delete', 'application::film-1.film-1', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(416, 'plugins::content-manager.explorer.delete', 'application::film-2.film-2', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(417, 'plugins::content-manager.explorer.delete', 'application::footer.footer', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(418, 'plugins::content-manager.explorer.delete', 'application::makeup.makeup', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(419, 'plugins::content-manager.explorer.delete', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(420, 'plugins::content-manager.explorer.delete', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(421, 'plugins::content-manager.explorer.delete', 'application::propositions-and-opportunities.propositions-and-opportunities', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(422, 'plugins::content-manager.explorer.delete', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(423, 'plugins::content-manager.explorer.delete', 'plugins::users-permissions.user', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(424, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importconfig', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(425, 'plugins::content-manager.explorer.delete', 'plugins::import-content.importeditem', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(426, 'plugins::content-manager.explorer.publish', 'application::care.care', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(427, 'plugins::content-manager.explorer.publish', 'application::dot-over-i.dot-over-i', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(428, 'plugins::content-manager.explorer.publish', 'application::film-1.film-1', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(429, 'plugins::content-manager.explorer.publish', 'application::film-2.film-2', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(430, 'plugins::content-manager.explorer.publish', 'application::footer.footer', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(431, 'plugins::content-manager.explorer.publish', 'application::makeup.makeup', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(432, 'plugins::content-manager.explorer.publish', 'application::moisturizing.moisturizing', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(433, 'plugins::content-manager.explorer.publish', 'application::products-to-be-proud-of.products-to-be-proud-of', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{}'),
+(434, 'plugins::content-manager.explorer.publish', 'application::propositions-and-opportunities.propositions-and-opportunities', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}'),
+(435, 'plugins::content-manager.explorer.publish', 'application::shop-adresses.shop-adresses', NULL, '[]', 1, '2021-04-30 10:46:03', '2021-04-30 10:46:03', '{\"locales\":[\"en\",\"pl\"]}');
 
 -- --------------------------------------------------------
 
@@ -873,7 +1070,7 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (321, 'application', 'moisturizing', 'delete', 0, '', 1, NULL, NULL),
 (322, 'application', 'moisturizing', 'delete', 0, '', 2, NULL, NULL),
 (323, 'application', 'moisturizing', 'find', 0, '', 1, NULL, NULL),
-(324, 'application', 'moisturizing', 'find', 0, '', 2, NULL, NULL),
+(324, 'application', 'moisturizing', 'find', 1, '', 2, NULL, NULL),
 (325, 'application', 'moisturizing', 'update', 0, '', 1, NULL, NULL),
 (326, 'application', 'moisturizing', 'update', 0, '', 2, NULL, NULL),
 (327, 'documentation', 'documentation', 'deletedoc', 0, '', 1, NULL, NULL),
@@ -929,7 +1126,53 @@ INSERT INTO `users-permissions_permission` (`id`, `type`, `controller`, `action`
 (377, 'application', 'footer', 'createlocalization', 0, '', 1, NULL, NULL),
 (378, 'application', 'footer', 'createlocalization', 0, '', 2, NULL, NULL),
 (379, 'application', 'shop-adresses', 'createlocalization', 0, '', 1, NULL, NULL),
-(380, 'application', 'shop-adresses', 'createlocalization', 0, '', 2, NULL, NULL);
+(380, 'application', 'shop-adresses', 'createlocalization', 0, '', 2, NULL, NULL),
+(381, 'application', 'care', 'delete', 0, '', 1, NULL, NULL),
+(382, 'application', 'care', 'delete', 0, '', 2, NULL, NULL),
+(383, 'application', 'care', 'find', 0, '', 1, NULL, NULL),
+(384, 'application', 'care', 'find', 1, '', 2, NULL, NULL),
+(385, 'application', 'care', 'update', 0, '', 1, NULL, NULL),
+(386, 'application', 'care', 'update', 0, '', 2, NULL, NULL),
+(387, 'application', 'propositions-and-opportunities', 'createlocalization', 0, '', 1, NULL, NULL),
+(388, 'application', 'propositions-and-opportunities', 'createlocalization', 0, '', 2, NULL, NULL),
+(389, 'application', 'propositions-and-opportunities', 'delete', 0, '', 1, NULL, NULL),
+(390, 'application', 'propositions-and-opportunities', 'delete', 0, '', 2, NULL, NULL),
+(391, 'application', 'propositions-and-opportunities', 'find', 0, '', 1, NULL, NULL),
+(392, 'application', 'propositions-and-opportunities', 'find', 1, '', 2, NULL, NULL),
+(393, 'application', 'propositions-and-opportunities', 'update', 0, '', 1, NULL, NULL),
+(394, 'application', 'propositions-and-opportunities', 'update', 0, '', 2, NULL, NULL),
+(395, 'application', 'makeup', 'createlocalization', 0, '', 1, NULL, NULL),
+(396, 'application', 'makeup', 'createlocalization', 0, '', 2, NULL, NULL),
+(397, 'application', 'makeup', 'delete', 0, '', 1, NULL, NULL),
+(398, 'application', 'makeup', 'delete', 0, '', 2, NULL, NULL),
+(399, 'application', 'makeup', 'find', 1, '', 2, NULL, NULL),
+(400, 'application', 'makeup', 'find', 0, '', 1, NULL, NULL),
+(401, 'application', 'makeup', 'update', 0, '', 1, NULL, NULL),
+(402, 'application', 'makeup', 'update', 0, '', 2, NULL, NULL),
+(403, 'application', 'film-1', 'createlocalization', 0, '', 1, NULL, NULL),
+(404, 'application', 'film-1', 'createlocalization', 0, '', 2, NULL, NULL),
+(405, 'application', 'film-1', 'delete', 0, '', 1, NULL, NULL),
+(406, 'application', 'film-1', 'delete', 0, '', 2, NULL, NULL),
+(407, 'application', 'film-1', 'find', 0, '', 1, NULL, NULL),
+(408, 'application', 'film-1', 'find', 1, '', 2, NULL, NULL),
+(409, 'application', 'film-1', 'update', 0, '', 1, NULL, NULL),
+(410, 'application', 'film-1', 'update', 0, '', 2, NULL, NULL),
+(411, 'application', 'film-2', 'createlocalization', 0, '', 1, NULL, NULL),
+(412, 'application', 'film-2', 'createlocalization', 0, '', 2, NULL, NULL),
+(413, 'application', 'film-2', 'delete', 0, '', 1, NULL, NULL),
+(414, 'application', 'film-2', 'delete', 0, '', 2, NULL, NULL),
+(415, 'application', 'film-2', 'find', 0, '', 1, NULL, NULL),
+(416, 'application', 'film-2', 'find', 1, '', 2, NULL, NULL),
+(417, 'application', 'film-2', 'update', 0, '', 1, NULL, NULL),
+(418, 'application', 'film-2', 'update', 0, '', 2, NULL, NULL),
+(419, 'application', 'dot-over-i', 'createlocalization', 0, '', 1, NULL, NULL),
+(420, 'application', 'dot-over-i', 'createlocalization', 0, '', 2, NULL, NULL),
+(421, 'application', 'dot-over-i', 'delete', 0, '', 1, NULL, NULL),
+(422, 'application', 'dot-over-i', 'delete', 0, '', 2, NULL, NULL),
+(423, 'application', 'dot-over-i', 'find', 0, '', 1, NULL, NULL),
+(424, 'application', 'dot-over-i', 'find', 1, '', 2, NULL, NULL),
+(425, 'application', 'dot-over-i', 'update', 0, '', 1, NULL, NULL),
+(426, 'application', 'dot-over-i', 'update', 0, '', 2, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -988,6 +1231,12 @@ ALTER TABLE `bb_creams`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `cares`
+--
+ALTER TABLE `cares`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
@@ -997,6 +1246,42 @@ ALTER TABLE `core_store`
 -- Indeksy dla tabeli `designer_packages`
 --
 ALTER TABLE `designer_packages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `dot_over_i_s`
+--
+ALTER TABLE `dot_over_i_s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `dot_over_i_s__localizations`
+--
+ALTER TABLE `dot_over_i_s__localizations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `film_1s`
+--
+ALTER TABLE `film_1s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `film_1s__localizations`
+--
+ALTER TABLE `film_1s__localizations`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `film_2s`
+--
+ALTER TABLE `film_2s`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `film_2s__localizations`
+--
+ALTER TABLE `film_2s__localizations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1055,6 +1340,18 @@ ALTER TABLE `importeditems`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indeksy dla tabeli `makeups`
+--
+ALTER TABLE `makeups`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `makeups__localizations`
+--
+ALTER TABLE `makeups__localizations`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeksy dla tabeli `moisturizing`
 --
 ALTER TABLE `moisturizing`
@@ -1064,6 +1361,18 @@ ALTER TABLE `moisturizing`
 -- Indeksy dla tabeli `products_to_be_proud_ofs`
 --
 ALTER TABLE `products_to_be_proud_ofs`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `propositions_and_opportunities`
+--
+ALTER TABLE `propositions_and_opportunities`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeksy dla tabeli `propositions_and_opportunities__localizations`
+--
+ALTER TABLE `propositions_and_opportunities__localizations`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -1154,16 +1463,58 @@ ALTER TABLE `bb_creams`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT dla tabeli `cares`
+--
+ALTER TABLE `cares`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `core_store`
 --
 ALTER TABLE `core_store`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=62;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=74;
 
 --
 -- AUTO_INCREMENT dla tabeli `designer_packages`
 --
 ALTER TABLE `designer_packages`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `dot_over_i_s`
+--
+ALTER TABLE `dot_over_i_s`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `dot_over_i_s__localizations`
+--
+ALTER TABLE `dot_over_i_s__localizations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `film_1s`
+--
+ALTER TABLE `film_1s`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `film_1s__localizations`
+--
+ALTER TABLE `film_1s__localizations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `film_2s`
+--
+ALTER TABLE `film_2s`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `film_2s__localizations`
+--
+ALTER TABLE `film_2s__localizations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `footer`
@@ -1220,6 +1571,18 @@ ALTER TABLE `importeditems`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT dla tabeli `makeups`
+--
+ALTER TABLE `makeups`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `makeups__localizations`
+--
+ALTER TABLE `makeups__localizations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT dla tabeli `moisturizing`
 --
 ALTER TABLE `moisturizing`
@@ -1230,6 +1593,18 @@ ALTER TABLE `moisturizing`
 --
 ALTER TABLE `products_to_be_proud_ofs`
   MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT dla tabeli `propositions_and_opportunities`
+--
+ALTER TABLE `propositions_and_opportunities`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT dla tabeli `propositions_and_opportunities__localizations`
+--
+ALTER TABLE `propositions_and_opportunities__localizations`
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT dla tabeli `shop_adresses`
@@ -1253,7 +1628,7 @@ ALTER TABLE `strapi_administrator`
 -- AUTO_INCREMENT dla tabeli `strapi_permission`
 --
 ALTER TABLE `strapi_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=266;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=436;
 
 --
 -- AUTO_INCREMENT dla tabeli `strapi_role`
@@ -1289,7 +1664,7 @@ ALTER TABLE `upload_file_morph`
 -- AUTO_INCREMENT dla tabeli `users-permissions_permission`
 --
 ALTER TABLE `users-permissions_permission`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=381;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=427;
 
 --
 -- AUTO_INCREMENT dla tabeli `users-permissions_role`

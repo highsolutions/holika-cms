@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/film-2",
+      "handler": "film-2.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/film-2",
+      "handler": "film-2.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/film-2",
+      "handler": "film-2.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
