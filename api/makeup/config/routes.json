@@ -1,0 +1,28 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/makeup",
+      "handler": "makeup.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/makeup",
+      "handler": "makeup.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/makeup",
+      "handler": "makeup.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
