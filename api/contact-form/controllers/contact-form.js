@@ -17,6 +17,9 @@ module.exports = {
         "<p><b>Telefon:</b> " + ctx.request.body.tel + "</p>" +
         "<p><b>Nazwa firmy:</b> " + ctx.request.body.companyName + "</p>",
     });
-    return ctx.request.body.email;
+
+    return {
+      "status": "ok"
+    };
   }
 };
